@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanControl | Dashboard Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>💰 FinanControl</h2>
+            </div>
+            <nav class="menu">
+                <a href="#" class="menu-item active">
+                    📊 Dashboard
+                </a>
+                <a href="#" class="menu-item">
+                    💳 Transações
+                </a>
+                <a href="#" class="menu-item">
+                    📈 Relatórios
+                </a>
+                <a href="#" class="menu-item">
+                    ⚙️ Configurações
+                </a>
+            </nav>
+        </aside>
+        <!--Conteúdo principal-->
+        <main class="main-content">
+            <!--Cabeçalho-->
+            <header class="header">
+                <div>
+                    <h1>Olá, Guilherme</h1>
+                    <p>Veja como estão suas finanças hoje.</p>
+                </div>
+                <button class="add-transaction">
+                    + Nova Transação
+                </button>
+            </header>
+            <!--Cards Financeiros-->
+            <section class="cards">
+                <!--Card do saldo-->
+                <div class="card balance-card">
+                    <div class="card-top">
+                        <p>Saldo Total</p>
+                        <span class="card-icon balance-icon">💰</span>
+                    </div>
+                    <h2 id="balance">R$ 0,00</h2>
+                    <span class="card-info">
+                        Seu saldo atual
+                    </span>
+                </div>
+                <!--Card das receitas-->
+                <div class="card income-card">
+                    <div class="card-top">
+                        <p>Receitas</p>
+                        <span class="card-icon income-icon">
+                            📈
+                        </span>
+                    </div>
+                    <h2 id="income"> R$0,00</h2>
+                    <span class="card-info">
+                        Total recebido
+                    </span>
+                </div>
+                <!--Card das despesas-->
+                <div class=" card expense-card">
+                    <div class="card-top">
+                        <p>Despesas</p>
+                        <span class="card-icon expense-icon">
+                            📉
+                        </span>
+                    </div>
+                    <h2 id="expense">R$ 0,00</h2>
+                    <span class="card-info">Total gasto</span>
+                </div>
+            </section>
+
+            <!-- Área do gráfico-->
+            <section class="chart-section">
+                <h2>Visão Financeira</h2>
+                <div class="chart-placeholder">
+                    Gráfico aparecerá aqui
+                </div>
+            </section>
+
+            <!-- Lista de transações-->
+            <section class="transactions">
+                <h2>Últimas transações</h2>
+                <div class="transaction-list" id="transactionList">
+                    <p>Nenhuma transação cadastrada</p>
+                </div>
+            </section>
+        </main>
+        <div class="modal" id="transactionModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Nova transação</h2>
+                    <button class="close-modal" id="closeModal">
+                        ×
+                    </button>
+                </div>
+                <form id="transactionForm">
+                    <!--Nome da transação-->
+                    <div class="form-group">
+                        <label for="transactionName">
+                            Descrição
+                        </label>
+                        <input type="text" placeholder="Salário" id="transactionName" required>
+                    </div>
+                    <!--Valor-->
+                    <div class="form-group">
+                        <label for="transactionValue">
+                            Valor
+                        </label>
+                        <input type="number" id="transactionValue" placeholder="R$0,00" min="0.01" step="0.01" required>
+                    </div>
+                    <!--Tipo-->
+                    <div class="form-group">
+                        <select id="transactionType">
+                            <option value="" disabled selected>
+                                Selecione o tipo
+                            </option>
+                            <option value="income">
+                                Receita
+                            </option>
+                            <option value="expense">
+                                Despesa
+                            </option>
+                        </select>
+                    </div>
+                    <!--Categoria-->
+                    <div class="form-group">
+                        <label for="transactionCategory">
+                            Categoria
+                        </label>
+                        <select id="transactionCategory">
+                            <option value="Salário">
+                                Salário
+                            </option>
+                            <option value="Alimentação">
+                                Alimentação
+                            </option>
+                            <option value="Transporte">
+                                Transporte
+                            </option>
+                            <option value="Lazer">
+                                Lazer
+                            </option>
+                            <option value="Outros">
+                                Outros
+                            </option>
+                        </select>
+                    </div>
+                    <!--Botão-->
+                    <button type="submit" class="save-transaction">
+                        Salvar transação
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
