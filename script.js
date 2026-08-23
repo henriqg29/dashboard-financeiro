@@ -64,6 +64,7 @@ transactionForm.addEventListener("submit", (event) => {
     //Atualiza os valores
     updateBalance()
     renderTransaction()
+    updateChart()
 
     //Fecha o modal
     transactionModal.style.display = "none"
@@ -78,7 +79,7 @@ function updateBalance() {
     transactions.forEach(transaction =>{
         if(transaction.type === "income"){
             income += transaction.value
-        } else{
+        } else if (transaction.type === "expense"){
             expense += transaction.value
         }
     })
@@ -93,6 +94,55 @@ function formatCurrency(value){
     return value.toLocaleString("pt-BR", {
         style:"currency",
         currency:"BRL"
+    })
+}
+let financialChart = null
+
+function updateChart(){
+    const chartCanvas = document.getElementById("financialChart")
+
+    let income = 0
+    let expense = 0
+
+    transactions.forEach(transaction => {
+        if(transaction.type === "income"){
+            income += transaction.value 
+        } else if(transaction.type === "expense"){
+            expense += transaction.value
+        }
+    })
+//Se ja existir um grafico, remove antes de criar outro
+    if(financialChart){
+        financialChart.destroy()
+    }
+//Cria o gráfico
+    financialChart = new Chart(chartCanvas, {
+        type: "bar",
+        data:{
+        labels: ["Receitas", "Despesas"],
+        datasets:[{
+            label:"Valores em R$",
+            data: [income,expense],
+
+            borderWidth: 1,
+            borderRadius:8
+        }]
+        },
+        options:{
+            responsive: true,
+            maintainAspectRatio: false,
+
+            plugins: {
+                legend: {
+                    display:false
+                }
+            },
+            scales:{
+                y:{
+                    beginAtZero: true
+                }
+            }
+        }
     })
 }
 
@@ -162,9 +212,11 @@ transactionList.addEventListener("click", (event) => {
     //Atualiza tudo na tela
     updateBalance()
     renderTransaction()
+    updateChart()
 })
 
 window.addEventListener("load",() =>{
     updateBalance()
     renderTransaction()
+    updateChart()
 })

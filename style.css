@@ -129,16 +129,6 @@ body{
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/*Espaço temporário do gráfico*/
-.chart-placeholder{
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    border: 2px dashed #cbd5e1;
-}
-
 /*Transações*/
 .transactions{
     background-color: white;
@@ -398,4 +388,9 @@ body{
 .delete-transaction:hover{
     background-color: #fecaca;
     transform: scale(1.05)
+}
+
+.chart-placeholder{
+    height: 300px;
+    margin-top: 20px;
 }

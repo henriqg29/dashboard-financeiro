@@ -84,7 +84,7 @@
             <section class="chart-section">
                 <h2>Visão Financeira</h2>
                 <div class="chart-placeholder">
-                    Gráfico aparecerá aqui
+                    <canvas id="financialChart"></canvas>
                 </div>
             </section>
 
@@ -121,7 +121,7 @@
                     </div>
                     <!--Tipo-->
                     <div class="form-group">
-                        <select id="transactionType">
+                        <select id="transactionType" required>
                             <option value="" disabled selected>
                                 Selecione o tipo
                             </option>
@@ -164,7 +164,8 @@
             </div>
         </div>
     </div>
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 
