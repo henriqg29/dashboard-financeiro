@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanControl | Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="login-container">
+        <section class="login-card">
+            <!-- LOGO -->
+            <header class="login-brand">
+                <div class="brand-icon">
+                    F
+                </div>
+                <h1>
+                    Finan<span>Control</span>
+                </h1>
+            </header>
+
+            <!-- CABEÇALHO -->
+            <div class="login-header">
+                <span class="welcome-label">
+                    BEM-VINDO DE VOLTA
+                </span>
+                <h2>Acesse sua conta</h2>
+                <p>
+                    Organize suas finanças e tenha controle
+                    sobre seu dinheiro.
+                </p>
+            </div>
+
+            <!-- FORMULÁRIO -->
+            <form class="login-form" id="loginForm">
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="seuemail@exemplo.com"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <div class="password-container">
+                        <input
+                            type="password"
+                            id="senha"
+                            placeholder="Digite sua senha"
+                            required
+                        >
+                        <button
+                            type="button"
+                            class="toggle-password"
+                            id="togglePassword"
+                        >
+                            Mostrar
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- OPÇÕES DO FORMULÁRIO -->
+                <div class="form-options">
+                    <label class="remember-option">
+                        <input type="checkbox" id="lembrar">
+                        <span>Lembrar de mim</span>
+                    </label>
+                    <a href="#" class="forgot-password">
+                        Esqueceu a senha?
+                    </a>
+                </div>
+
+
+                <!-- BOTÃO DE LOGIN -->
+                <button type="submit" class="login-button">
+                    Entrar na minha conta
+                    <span>→</span>
+                </button>
+            </form>
+
+            <!-- CADASTRO -->
+            <div class="register-link">
+                <p>
+                    Ainda não tem uma conta?
+                    <a href="cadastro.html">
+                        Criar conta
+                    </a>
+                </p>
+            </div>
+
+            <!-- RODAPÉ -->
+            <footer class="login-footer">
+                <span>🔒</span>
+                <p>
+                    Seus dados merecem segurança.
+                </p>
+            </footer>
+        </section>
+        <p class="copyright">
+            FinanControl © 2026
+        </p>
+
+    </main>
+    <script src="login.js"></script>
+</body>
+
+</html>

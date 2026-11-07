@@ -1,0 +1,304 @@
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #0D1110;
+    --card: #151C19;
+    --primary: #22C58B;
+    --primary-hover: #19A875;
+    --text: #F1F5F3;
+    --text-secondary: #89958F;
+    --border: #29342F;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+
+/* CONTAINER PRINCIPAL */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+
+/* CARD DE LOGIN */
+.login-card {
+    width: 100%;
+    max-width: 440px;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+
+/* IDENTIDADE VISUAL */
+.login-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 38px;
+}
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    color: #0D1110;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.login-brand h1 {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.login-brand h1 span {
+    color: var(--primary);
+}
+
+
+/* CABEÇALHO */
+.login-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.welcome-label {
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.login-header h2 {
+    font-size: 27px;
+    font-weight: 700;
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.login-header p {
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* FORMULÁRIO */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.input-group label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    background-color: #0F1512;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 13px;
+    transition: border-color 0.3s;
+}
+
+.input-group input::placeholder {
+    color: #64716A;
+}
+
+.input-group input:focus {
+    border-color: var(--primary);
+}
+
+
+/* CAMPO DE SENHA */
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    padding-right: 75px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 13px;
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* OPÇÕES DE FORMULÁRIO */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: -5px;
+}
+
+.remember-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.remember-option input {
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+.forgot-password {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.forgot-password:hover,
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* BOTÕES DE LOGIN */
+.login-button {
+    width: 100%;
+    height: 49px;
+    background-color: var(--primary);
+    color: #0D1110;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.login-button span {
+    font-size: 18px;
+}
+
+/* LINK DE CADASTRO */
+.register-link {
+    text-align: center;
+    margin-top: 28px;
+}
+
+.register-link p {
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+.register-link a {
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 3px;
+}
+
+
+/* RODAPÉ */
+
+.login-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    border-top: 1px solid var(--border);
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.login-footer span {
+    font-size: 12px;
+}
+
+.login-footer p {
+    color: var(--text-secondary);
+    font-size: 11px;
+}
+
+.copyright {
+    margin-top: 25px;
+    color: #64716A;
+    font-size: 11px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 480px) {
+
+    .login-container {
+        padding: 25px 15px;
+    }
+
+    .login-card {
+        padding: 30px 22px;
+    }
+
+    .login-header h2 {
+        font-size: 24px;
+    }
+
+    .form-options {
+        flex-wrap: wrap;
+    }
+
+}
+
+

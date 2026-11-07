@@ -1,0 +1,33 @@
+/* TELA DE CADASTRO */
+
+#cadastroForm{
+    gap: 18px;
+}
+
+#cadastroForm .input-group{
+    gap: 8px;
+}
+
+.login-card:has(#cadastroForm){
+    max-width: 460px;
+    padding: 35px 40px;
+}
+
+.login-card:has(#cadastroForm) .login-brand{
+    margin-bottom: 28px;
+}
+
+.login-card:has(#cadastroForm) .login-header{
+    margin-bottom: 25px;
+}
+
+.login-card:has(#cadastroForm) .input-group input{
+    height: 45px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 480px){
+    .login-card:has(#cadastroForm){
+        padding: 28px 22px;
+    }
+}

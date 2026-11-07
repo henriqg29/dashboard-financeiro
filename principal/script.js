@@ -1,3 +1,10 @@
+//VERIFICAR USUARIO LOGADO
+const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"))
+
+if(!usuarioLogado){
+    window.location.href = "../login/login.html"
+}
+
 //Botão de abrir o modal
 const addTransactionButton = document.querySelector(".add-transaction")
 //Modal
